@@ -35,8 +35,8 @@ def find_3_multiple(input):
     return -1
 
 
-input_file = open('input.txt', 'r')
-input = [int(line.strip()) for line in input_file.readlines()]
+with open('input.txt', 'r') as input_file:
+    input = [int(line.strip()) for line in input_file.readlines()]
 input.sort()
 print(find_2_multiple(input))
 print(find_3_multiple(input))
